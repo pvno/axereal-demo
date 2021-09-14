@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<LightningComponentBundle xmlns="http://soap.sforce.com/2006/04/metadata">
+    <apiVersion>50.0</apiVersion>
+    <isExposed>true</isExposed>
+    <masterLabel>Background Video Player</masterLabel>
+    <targets>
+      <target>lightningCommunity__Page</target>
+      <target>lightningCommunity__Default</target>
+    </targets>
+    <targetConfigs>
+        <targetConfig targets="lightningCommunity__Default">
+            <property name="videoUrl" type="String" default="" label="Video URL" description="External or internal (static resource) video url." />
+            <property name="videoPoster" type="String" default="" label="Video Poster" description="Background image while video is loading." />
+            <property name="displayType" type="String" default="Fixed" label="Video display type" datasource="Fixed,Absolute,Relative" />
+            <property name="paramText" type="String" default="Set this text from url param" label="Param Text" />
+        </targetConfig>
+    </targetConfigs>
+</LightningComponentBundle>
